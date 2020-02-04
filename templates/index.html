@@ -1,0 +1,23 @@
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.devbridge-autocomplete/1.2.26/jquery.autocomplete.min.js"></script>
+
+
+<body>
+  Names:
+  <input type="text" name="names" id="autocomplete1"/>
+
+
+
+
+  <script>
+  $('#autocomplete1').autocomplete({
+      serviceUrl: '/search/',
+      dataType: 'json',
+      onSearchComplete: function () {
+        console.log(query);
+      }
+  });
+
+  
+  </script>
